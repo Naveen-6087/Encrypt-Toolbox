@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encryption Toolbox</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Encryption Toolbox</h1>
+
+        <!-- AES Key Generation -->
+        <h2>AES Encryption</h2>
+        <form method="POST" action="/generate_aes_key">
+            <button type="submit">Generate AES Key</button>
+        </form>
+        {% if aes_key %}
+            <p><strong>Generated AES Key:</strong> {{ aes_key }}</p>
+        {% endif %}
+        
+        <form method="POST" action="/aes_encrypt">
+            <input type="text" name="plaintext" placeholder="Enter plaintext for AES" required>
+            <button type="submit">Encrypt with AES</button>
+        </form>
+        {% if ciphertext %}
+            <p><strong>Encrypted AES:</strong> {{ ciphertext }}</p>
+        {% endif %}
+        
+        <form method="POST" action="/aes_decrypt">
+            <input type="text" name="ciphertext" placeholder="Enter ciphertext for AES" required>
+            <button type="submit">Decrypt AES</button>
+        </form>
+        {% if plaintext %}
+            <p><strong>Decrypted AES:</strong> {{ plaintext }}</p>
+        {% endif %}
+
+        <!-- RSA Key Generation -->
+        <h2>RSA Encryption</h2>
+        <form method="POST" action="/generate_rsa_keys">
+            <button type="submit">Generate RSA Keys</button>
+        </form>
+        {% if public_key %}
+            <p><strong>Generated RSA Public Key:</strong> {{ public_key }}</p>
+        {% endif %}
+        
+        <form method="POST" action="/rsa_encrypt">
+            <input type="text" name="plaintext" placeholder="Enter plaintext for RSA" required>
+            <button type="submit">Encrypt with RSA</button>
+        </form>
+        {% if rsa_ciphertext %}
+            <p><strong>Encrypted RSA:</strong> {{ rsa_ciphertext }}</p>
+        {% endif %}
+        
+        <form method="POST" action="/rsa_decrypt">
+            <input type="text" name="ciphertext" placeholder="Enter ciphertext for RSA" required>
+            <button type="submit">Decrypt RSA</button>
+        </form>
+        {% if rsa_plaintext %}
+            <p><strong>Decrypted RSA:</strong> {{ rsa_plaintext }}</p>
+        {% endif %}
+
+        <!-- SHA-256 Hashing -->
+        <h2>SHA-256 Hashing</h2>
+        <form method="POST" action="/sha256">
+            <input type="text" name="plaintext" placeholder="Enter plaintext to hash" required>
+            <button type="submit">Hash with SHA-256</button>
+        </form>
+        {% if sha_hash %}
+            <p><strong>SHA-256 Hash:</strong> {{ sha_hash }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>
