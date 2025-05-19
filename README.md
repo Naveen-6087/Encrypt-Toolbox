@@ -1,43 +1,37 @@
-🔐 Encryption Toolbox
+# 🔐 Encryption Toolbox
+
 A lightweight encryption toolbox with a simple app UI. It supports:
 
-AES encryption/decryption
+- AES encryption/decryption  
+- RSA encryption/decryption  
+- SHA-256 hashing  
 
-RSA encryption/decryption
+---
 
-SHA-256 hashing
+## 🚀 Features
 
-🚀 Features
-AES (256-bit) with CFB mode
+- AES (256-bit) with CFB mode  
+- RSA (2048-bit) with OAEP padding  
+- SHA-256 one-way hashing  
+- Base64-encoded outputs  
+- User-friendly graphical interface  
 
-RSA (2048-bit) with OAEP padding
+---
 
-SHA-256 one-way hashing
+## 🛠️ Usage
 
-Base64-encoded outputs
-
-User-friendly graphical interface
-
-🛠️ Usage
-Clone the repo:
-
-bash
-Copy
-Edit
+```bash
+# 1. Clone the repo
 git clone https://github.com/your-username/encryption-toolbox.git
-Install dependencies:
+cd encryption-toolbox
 
-bash
-Copy
-Edit
+# 2. Install dependencies
 pip install -r requirements.txt
-Run the app:
 
-bash
-Copy
-Edit
+# 3. Run the app
 python app.py
+```
 📂 Files
-encryption.py – Contains all encryption/decryption/hash logic
-app.py – UI to interact with the toolbox
+encryption.py – Contains all encryption, decryption, and hashing logic
 
+app.py – UI to interact with the toolbox
