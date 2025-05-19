@@ -32,6 +32,7 @@ pip install -r requirements.txt
 python app.py
 ```
 📂 Files
+
 encryption.py – Contains all encryption, decryption, and hashing logic
 
 app.py – UI to interact with the toolbox
